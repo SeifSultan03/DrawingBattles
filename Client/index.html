@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drawing Battles</title>
+    <script defer src="Script.js" type="module"></script>
+    <link rel="stylesheet" href="Page1.css">
+    <link rel="stylesheet" href="Main.css">
+  </head>
+  <body>
+
+    <!-- normal code -->
+    <h1 hidden>Drawing Battles</h1>
+    <!--h2 hidden>INFO HERE LATER</h2-->
+    <div id="page1">
+      <a href="./index.html">
+        <img src="./images/DrawingBattles.png" alt="Drawing Battles Logo" id="logo">
+      </a>
+  
+      <div class="buttonsContainer">
+        <input type="text" id="nickname" name="nickname" placeholder="Enter Nickname" maxlength=15>
+        <button class="btn" id="quickPlayButton">Quick Play</button>
+        <button class="btn" id="CreateLobbyButton">+ Create Lobby</button>
+        <div class="joinContainer">
+          <button class="btn" id="JoinLobbyButton">Join Lobby</button>
+          <input type="text" id="roomCode" name="roomCode" placeholder="Room Code" maxlength=5>
+        </div>
+        <div class="HowToPlayHeader">How To Play</div>
+        <div class="HowToPlay">Compete with friends to see who has the best drawing skills!<br> A word is chosen and you have to draw it
+          then vote on which is the best drawing!</div>
+      </div>  
+    </div>
+
+    <div id="page2" hidden>
+      <h1> LOADING </h1>
+    </div>
+
+    <div id="page3" hidden>
+      <div id="orangeRectangle">
+        <div id="votingContainer" hidden>
+          <div id="timerVoting">9<img src="./images/stopwatch.png" alt="Timer" id="timerImageVoting"></div>
+          <div id="votingHeader">Vote For Word</div>
+          <div class="votesContainer">
+            <button class="wordVote" id="word1">word1</button>
+            <div class="votes" id="votes1">0</div>
+          </div>
+          <div class="votesContainer">
+            <button class="wordVote" id="word2">word2</button>
+            <div class="votes" id="votes2">0</div>
+          </div>
+          <div class="votesContainer">
+            <button class="wordVote" id="word3">word3</button>
+            <div class="votes" id="votes3">0</div>
+          </div>
+        </div>
+        <div id="chosenWordContainer">
+          <div id="chosenWordHeader"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page4" hidden>
+      <canvas id="resizerCanvas" width="200" height="160" hidden></canvas>
+      <img src="./images/cursorBlack2.png" id="cursor" hidden>
+      <a href="./index.html">
+        <img src="./images/DrawingBattles.png" alt="Drawing Battles Logo" id="logo2">
+      </a>
+      <ul class="header">
+        <li id="timer">180<img src="./images/stopwatch.png" alt="Timer" id="timerImage"></li>
+        <li id="roomCodeDisplay">Room Code: YXLAD <button id="copyCodeButton">Copy Code</button></li>
+        <li id="word">Word: house</li>
+      </ul>
+      <div id="playersContainer">
+        <div class="playerTag" class="DoNotDelete">
+          default
+        </div>
+      </div>
+      <div id="canvasContainer">
+        <canvas id="gameCanvas" width="500" height="400"></canvas>
+        <div id="allButtons" hidden>
+          <button id="resetCanvas"> reset canvas </button>
+          <!-- color buttons-->
+          <button class="colorButtons">Red</button>
+          <button class="colorButtons">Yellow</button>
+          <button class="colorButtons">Orange</button>
+          <button class="colorButtons">Green</button>
+          <button class="colorButtons">Blue</button>
+          <button class="colorButtons">Black</button>
+          <button class="colorButtons">White</button>
+          <button class="colorButtons">Gray</button>
+          <button class="colorButtons">#6c4d00</button>
+          <button class="colorButtons">#ff00c3</button>
+          <!-- brush size buttons -->
+          <div class="sizeContainer">
+            <button class="sizeButtons" id="smaller">2</button>
+            <button class="sizeButtons" id="small">4</button>
+            <button class="sizeButtons" id="medium">6</button>
+            <button class="sizeButtons" id="big">8</button>
+          </div>
+        </div>
+        <div id="paintingVotingButtons" hidden>
+          Vote:
+          <button class="paintingVotingButton" id="v1">1</button>
+          <button class="paintingVotingButton" id="v2">2</button>
+          <button class="paintingVotingButton" id="v3">3</button>
+          <button class="paintingVotingButton" id="v4">4</button>
+          <button class="paintingVotingButton" id="v5">5</button>
+        </div>
+      </div>
+      <div id="chatContainer">
+        <div id="messages">
+          <div class="message join">
+            seif has joined the room
+          </div>
+          <div class="message leave">
+            master has left the room
+          </div>
+          <div class="message">
+            WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+          </div>
+        </div>
+        
+        <textarea type="text" id="chatText" placeholder="Send your messages here" maxlength="50"></textarea>
+        <!--input type="text" id="chatText" name="chatText" placeholder="Send your messages here"-->
+        <button id="sendMessageButton">Send Message</button>
+      </div>
+    </div>
+
+    <div id="page5" hidden>
+      <div id="endScreenBackground">
+        <div id="topPlayersContainer">
+          <div id="first">1.top player</div>
+          <div id="second">2.second player</div>
+          <div id="third">3.third player</div>
+          <div class="more" hidden>4.more players</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

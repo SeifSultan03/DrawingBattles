@@ -1,0 +1,287 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 100% - 20px;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.header li{
+    list-style: none;
+    color: black;
+    font-family: "Helvetica", Arial;
+    font-weight: 600;
+}
+
+#timerImage{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 4px;
+    top: 105px;
+}
+
+#timerVoting{
+    color: black;
+    font-family: "Helvetica", Arial;
+    font-weight: 600;
+    position: relative;
+    left: 10px;
+}
+#timerImageVoting{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    right: 35px;
+    top: 18px
+}
+
+#copyCodeButton{
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 600;
+    background-color: greenyellow;
+    border-radius: 2vw;
+    border: none;
+    margin-left: 4px;
+    cursor:pointer;
+}
+
+#canvasContainer{
+    display: inline-block;
+}
+
+#gameCanvas{
+    vertical-align:top;
+    cursor: none;
+    background-color: white;
+}
+
+#cursor{
+    position: absolute;
+    pointer-events: none;
+}
+
+#logo2{
+    width:200px
+}
+
+#playersContainer{
+    vertical-align:top;
+    display: inline-block;
+    background-color: transparent;
+    height: 70vh;
+    width: 17vw;
+    min-height: 200px;
+}
+
+.playerTag{
+    display: none;
+    margin-bottom: 2px;
+    background-color: white;
+    width: 100%;
+    height: 10%;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 700;
+    font-size: min(3vh, 2vw);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#chatContainer{
+    vertical-align:top;
+    display: inline-block;
+    background-color: white;
+    height: 70vh;
+    width: 17vw;
+    min-height: 200px;
+}
+
+#messages{
+    overflow-y: scroll;
+    overflow-x: clip;
+    height: 80%;
+}
+
+.message{
+    display: none;
+    margin-bottom: 2px;
+    background-color: white;
+    width: 100%;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 700;
+    font-size: min(2.4vh, 1.8vw);
+    border-radius: 10px;
+    word-break: break-word;
+}
+
+.join{
+    color:rgb(0, 255, 0);
+}
+
+.leave{
+    color:red;
+}
+
+#chatText{
+    height: 10.7%;
+    width: 97.8%;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 700;
+    font-size: min(2vh, 1vw);
+    word-break: break-word;
+    resize: none;
+    margin-bottom: 0px;
+}
+
+#sendMessageButton{
+    width: 100%;
+    height: 7%;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 700;
+    font-size: min(2vh, 1vw);
+    background-color: greenyellow;
+    border: none;
+    margin: 0px;
+}
+
+#sendMessageButton:hover{
+    background-color: rgb(153, 255, 0);
+    cursor: pointer;
+}
+
+.allButtons{
+    margin-top: 1vh;
+}
+.colorButtons{
+    cursor:pointer;
+    border:none;
+    width:3vw;
+    height:3vw;
+    font-size: 0;
+}
+
+#resetCanvas{
+    cursor: pointer;
+    background: url(./images/resetCanvas.png) no-repeat;
+    background-size: 3vw;
+    border: none;
+    width: 3vw;
+    height: 3vw;
+    font-size: 0;
+}
+
+.sizeButtons{
+    cursor: pointer;
+    background: url(./images/cursorBlack2.png) no-repeat;
+    border: none;
+    font-size: 0;
+}
+
+#smaller{
+    background-size: 3vw;
+    width: 1.8vw;
+    height: 1.8vw;
+}
+
+#small{
+    background-size: 4vw;
+    width: 2.3vw;
+    height: 2.3vw;
+}
+#medium{
+    background-size: 5vw;
+    width: 2.9vw;
+    height: 2.9vw;
+}
+#big{
+    background-size: 6vw;
+    width: 3.6vw;
+    height: 3.6vw;
+}
+
+#page3{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+}
+#orangeRectangle{
+    display: flex;
+    background-color: orange;
+    width: 100vw;
+    height: 40vh;
+    align-items: center;
+}
+
+#votingContainer{
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+#votingHeader{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;   
+    font-size: 5vw;
+    margin-left: 35vw;
+    color: #2c3e50;
+}
+
+.votesContainer{
+    display: inline-block;
+}
+
+.wordVote{
+    width: 20vw;
+    background-color: transparent;
+    border-radius: 0.6em;
+    cursor: pointer;
+    font-size: 2vw;
+    line-height: 1;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;    
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+    margin-left: 10vw;
+}
+
+.votes{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;  
+    font-size: 2vw;
+    margin-left: 9.4vw;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.wordVote:hover{
+    outline: 0;
+    box-shadow: 0 0 40px 40px #2c3e50 inset;
+    color: #fff;
+}
+
+#chosenWordContainer{
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+#chosenWordHeader{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;   
+    font-size: 5vw;
+    margin-left: 15vw;
+    color: #2c3e50;
+}

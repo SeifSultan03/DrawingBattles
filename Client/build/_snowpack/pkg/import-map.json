@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "@socket.io/component-emitter": "./@socket.io/component-emitter.js",
+    "engine.io-client": "./engine.io-client.js",
+    "engine.io-parser": "./engine.io-parser.js",
+    "socket.io-client": "./socket.io-client.js",
+    "socket.io-parser": "./socket.io-parser.js"
+  }
+}

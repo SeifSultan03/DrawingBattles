@@ -1,0 +1,141 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c3e50;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+#logo{
+    width: 30%;
+    margin-left: 35.2%;
+    margin-top: 5%;
+}
+  
+.buttonsContainer{
+    display: grid;
+    justify-content: center;
+    row-gap: 10px;
+    max-width: 100%;
+    padding-top: 10px;
+}
+
+.HowToPlayHeader{
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 800;
+    font-size: 3vw;
+}
+
+.HowToPlay{
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.3vw;
+    margin-bottom: 40px;
+}
+.joinContainer{
+    display: inline-flex;
+}
+
+#roomCode{
+    border-radius: 0.6em;
+    font-weight: 700;
+    font-size: 1.5vw;
+    font-family: 'Montserrat', sans-serif;
+    width: 10vw;
+    text-transform: uppercase;
+    /*color: rgb(0, 214, 252);*/
+}
+
+#nickname{
+    border-radius: 0.6em;
+    font-weight: 700;
+    font-size: 1.5vw;
+    font-family: 'Montserrat', sans-serif;
+    height: 50px;
+    width: 30vw;
+    margin-left: 10vw;
+}
+::-webkit-input-placeholder {
+    text-transform: none;
+}
+:-moz-placeholder { 
+    text-transform: none;
+}
+::-moz-placeholder {
+    text-transform: none;
+}
+:-ms-input-placeholder {
+    text-transform: none;
+}
+::placeholder {
+    text-transform: none;
+}
+
+.btn {
+    max-width: 100%;
+    background-color: transparent;
+    border-radius: 0.6em;
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.btn:hover, .btn:focus {
+    outline: 0;
+}
+  
+#quickPlayButton {
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+    width: 30vw;
+    margin-left: 10vw;
+}
+
+#quickPlayButton:hover {
+    box-shadow: 0 0 40px 40px #e74c3c inset;
+    color: #fff;
+}
+
+#CreateLobbyButton {
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    color: rgb(5, 217, 48);
+    border: 2px solid rgb(5, 217, 48);
+    width: 30vw;
+    margin-left: 10vw;
+}
+
+#CreateLobbyButton:hover {
+    box-shadow: 0 0 40px 40px rgb(5, 217, 48) inset;
+    color: #fff;
+}
+
+#JoinLobbyButton {
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    color: rgb(0, 214, 252);
+    border: 2px solid rgb(0, 214, 252);
+    width: 20vw;
+    margin-left: 10vw;
+}
+
+#JoinLobbyButton:hover {
+    box-shadow: 0 0 40px 40px rgb(0, 214, 252) inset;
+    color: #fff;
+}
