@@ -3,9 +3,9 @@ const { v4: uuidv4 } = require('uuid')
 
 const gameLength = 15000
 
-const io = require("socket.io")(3000, {
+const io = require("socket.io")(process.env.PORT || 5000, {
     cors: {
-        origin: ["http://localhost:8080","http://192.168.1.152:8080"]
+        origin: ["http://localhost:8080","http://192.168.1.152:8080", "https://drawingbattles.herokuapp.com/"]
     }, 
     maxHttpBufferSize: 1e8, 
     pingTimeout: 60000
