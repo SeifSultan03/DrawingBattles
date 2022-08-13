@@ -22,7 +22,7 @@ server.listen(process.env.PORT || 3000, function() {
 
 //var CircularJSON = require('circular-json');
 const { v4: uuidv4 } = require('uuid')
-const gameLength = 15000
+const gameLength = 180000
 
 /*const io = require("socket.io")(process.env.PORT || 3000, {
     cors: {
