@@ -1,4 +1,4 @@
-import { io } from "socket.io-client"
+import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js"//"socket.io-client"
 
 const socket = io("http://localhost:3000")
 

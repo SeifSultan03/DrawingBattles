@@ -1,16 +1,43 @@
+const path = require('path');
+
+const express = require('express')
+const app = express();
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+
+app.get('/',function(req, res){
+    console.log(path.join(__dirname, '/Client/index.html'))
+    res.sendFile(path.join(__dirname, '/Client/index.html'));
+});
+
+//Whenever someone connects this gets executed
+io.on('connection', function(socket) {
+   console.log('A user connected');
+
+   //Whenever someone disconnects this piece of code executed
+   socket.on('disconnect', function () {
+      console.log('A user disconnected');
+   });
+});
+
+app.use(express.static(path.join(__dirname, '/Client')))
+
+server.listen(3000, function() {
+   console.log('listening on *:3000');
+});
+
 //var CircularJSON = require('circular-json');
 const { v4: uuidv4 } = require('uuid')
-
 const gameLength = 15000
-
-const io = require("socket.io")(process.env.PORT || 5000, {
+/*
+const io = require("socket.io")(process.env.PORT || 3000, {
     cors: {
         origin: ["http://localhost:8080","http://192.168.1.152:8080", "https://drawingbattles.herokuapp.com/"]
     }, 
     maxHttpBufferSize: 1e8, 
     pingTimeout: 60000
 })
-//change
+
 function EndGame(roomId){
     let room = CurrentRooms[roomId]
     if (room){
@@ -392,4 +419,4 @@ io.on("connection", (socket) => {
     });
 })
 
-console.log("server running")
+console.log("server running")*/
