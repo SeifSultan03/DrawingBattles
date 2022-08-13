@@ -1,18 +1,25 @@
 {
   "name": "socketiotest",
   "version": "1.0.0",
-  "description": "",
-  "main": "Untitled-1.js",
+  "description": "Game website where players compete for the best drawing. Created using a node backend and socket.io",
+  "main": "Server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeifSultan03/DrawingBattles.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeifSultan03/DrawingBattles/issues"
+  },
+  "homepage": "https://github.com/SeifSultan03/DrawingBattles#readme",
   "dependencies": {
-    "circular-json": "^0.5.9",
     "express": "^4.18.1",
-    "nodemon": "^2.0.19",
     "socket.io": "^4.5.1",
-    "uuidv4": "^6.2.13"
+    "uuid": "^8.3.2"
   }
 }
