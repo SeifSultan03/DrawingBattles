@@ -9,11 +9,11 @@ const io = require('socket.io')(server, {
     pingTimeout: 60000
 });
 
+app.use(express.static(__dirname + '/Client'))
+
 app.get('/',function(req, res){
     res.sendFile(__dirname+'/Client/index.html')//res.sendFile(path.join(__dirname, '/Client/index.html'));
 });
-
-app.use(express.static(__dirname + '/Client'))
 //express.static(path.join(__dirname, '/Client')))
 
 server.listen(process.env.PORT || 3000, function() {
