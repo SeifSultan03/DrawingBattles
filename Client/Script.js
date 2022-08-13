@@ -1,6 +1,6 @@
 import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js"//"socket.io-client"
 
-const socket = io("http://localhost:3000")
+const socket = io("https://drawingbattles.herokuapp.com:3000")
 
 //const sendImageDataButton = document.getElementById("sendImageData")
 const resetCanvasButton = document.getElementById("resetCanvas")
