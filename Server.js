@@ -20,7 +20,7 @@ io.on('connection', function(socket) {
 app.use(express.static(__dirname + '/Client'))
 //express.static(path.join(__dirname, '/Client')))
 
-server.listen(3000, function() {
+server.listen(process.env.PORT || 3000, function() {
    console.log('listening on *:3000');
 });
 
