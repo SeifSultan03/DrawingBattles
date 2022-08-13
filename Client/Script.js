@@ -118,7 +118,7 @@ function ResetCanvasOnMouseDown(){
 }
 
 function CreateRoom(){
-    if (nickname.value.length < 0){
+    if (nickname.value.length < 3){
         alert("nickname should be at least 3 letters")
     } else {
         DisplayPage(2)
