@@ -1,13 +1,10 @@
-const path = require('path');
-
 const express = require('express')
 const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
 app.get('/',function(req, res){
-    console.log(path.join(__dirname, '/Client/index.html'))
-    res.sendFile(path.join(__dirname, '/Client/index.html'));
+    res.sendFile(__dirname+'/Client/index.html')//res.sendFile(path.join(__dirname, '/Client/index.html'));
 });
 
 //Whenever someone connects this gets executed
@@ -20,7 +17,8 @@ io.on('connection', function(socket) {
    });
 });
 
-app.use(express.static(path.join(__dirname, '/Client')))
+app.use(express.static(__dirname + '/Client'))
+//express.static(path.join(__dirname, '/Client')))
 
 server.listen(3000, function() {
    console.log('listening on *:3000');
