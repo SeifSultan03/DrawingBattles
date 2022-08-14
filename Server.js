@@ -16,6 +16,8 @@ app.get('/',function(req, res){
 });
 //express.static(path.join(__dirname, '/Client')))
 
+app.use(favicon(__dirname + '/favicon.ico'));
+
 server.listen(process.env.PORT || 3000, function() {
    console.log('listening on *:3000');
 });
