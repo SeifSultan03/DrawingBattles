@@ -364,5 +364,6 @@ body {
 }
 
 .toLoad{
+    position: absolute;
     visibility: hidden;
 }
