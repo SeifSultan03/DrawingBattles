@@ -362,3 +362,7 @@ body {
 .more{
     color:white;
 }
+
+.toLoad{
+    visibility: hidden;
+}
