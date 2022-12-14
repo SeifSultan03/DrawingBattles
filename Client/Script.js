@@ -136,7 +136,12 @@ function JoinRoom(){
 }
 
 function QuickPlay(){
-
+    if (nickname.value.length < 3){
+        alert("nickname should be at least 3 letters")
+    } else {
+        DisplayPage(2)
+        socket.emit("create-room", nickname.value)
+    }
 }
 
 function SendMessage(){
