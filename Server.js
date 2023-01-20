@@ -51,7 +51,7 @@ function EndGame(roomId){
     }
 }
 
-const randomWords = ["random", "dog", "cat", "urmom"]
+const randomWords = ["dog","cat","among us","dragon","knight","elephant","sunflower","giraffe","Ocean","Tree","mountain","fish","airplane"]
 function getRandomWord(){
     return randomWords[Math.floor(Math.random() * randomWords.length)];
 }
